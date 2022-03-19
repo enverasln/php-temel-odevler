@@ -2,7 +2,8 @@
 
 function ucgen($size) {
     for($i = 1; $i<=$size; $i++) {
-        for($j = 0; $j < $i; $j++)  {
+        $j = 0;
+        while($j++ < $i)  {
             echo "0 ";
         }
         echo "<br>";
