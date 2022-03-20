@@ -11,12 +11,9 @@ function removeEmptyElements($arr) {
 
 function getElementsRandomly($arr, $num = 1) {
     $keys = array_rand($arr, $num);
-    $result = [];
-    foreach ($keys as $key) {
-        $result[] = $arr[$key];
-    }
-
-    return $result;
+    return array_map(function ($key) use($arr) {
+        return $arr[$key];
+    }, $keys);
 }
 
 
